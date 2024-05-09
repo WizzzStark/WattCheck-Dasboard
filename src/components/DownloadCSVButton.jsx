@@ -3,7 +3,6 @@ import { saveAs } from 'file-saver';
 import PropTypes from 'prop-types';
 
 function DownloadCSVButton({ csvData }) {
-    console.log(csvData);
     const convertCSVToExcelAndDownload = (csvData) => {
         const blob = new Blob([csvData], { type: 'text/csv;charset=utf-8' });
         const reader = new FileReader();
