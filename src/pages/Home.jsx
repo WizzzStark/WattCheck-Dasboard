@@ -1,53 +1,48 @@
-import { DragAndDrop } from "../components/DragAndDrop";
-import { FiDownload, FiGithub } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+  const navigate = useNavigate();
 
   return (
-    <main className="h-full flex flex-col items-center justify-between">
-      <div className="relative flex flex-col items-center justify-center bg-white dark:bg-black transition-bg w-full h-full">
-        <div className="absolute inset-0 overflow-hidden">
-            <div className="jumbo absolute -inset-[10px] opacity-50"></div>
+    <div className='bg-[#111827]'>
+      <div className='overflow-clip flex flex-col relative min-h-[100vh]'>
+        <div className="blur-[80px] translate-x-[-50%] w-[1102px] z-10 left-[50%] top-0 bottom-0 absolute">
+          <div className="one" />
+          <div className="two" />
+          <div className="three" />
+          <div className="four" />
+          <div className="five" />
+          <div className="six" />
         </div>
-        <div className="flex flex-col items-center justify-center w-[95%] h-full">
-          <h1 className="relative flex items-center text-5xl font-bold text-gray-800 dark:text-white dark:opacity-80 transition-colors mb-10">
-              Watt
-              <span className="ml-2 rounded-xl bg-current p-2 text-[0.7em] leading-none">
-                  <span className="text-white dark:text-black">Check</span>
-              </span>
-          </h1>
-          <DragAndDrop/>
-          
-          <a 
-            href="/consumptions.csv"
-            className="flex items-center gap-2 text-gray-800 bg-gray-200 dark:bg-gray-700 dark:text-gray-100 px-4 py-2 rounded-md shadow-md hover:shadow-lg transition duration-300 z-10"
-            style={{ marginTop: '20px' }}
-          >
-            <FiDownload className="text-xl" />
-            Download CSV Example 1
-          </a>
-          <a 
-            href="/consumptions2.csv"
-            className="flex items-center gap-2 text-gray-800 bg-gray-200 dark:bg-gray-700 dark:text-gray-100 px-4 py-2 rounded-md shadow-md hover:shadow-lg transition duration-300 z-10"
-            style={{ marginTop: '20px' }}
-          >
-            <FiDownload className="text-xl" />
-            Download CSV Example 2
-          </a>
 
-
-          <a
-            href="https://github.com/raulmouzo/HackUDC-2024"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="absolute top-4 right-4 flex items-center gap-2 text-gray-800 dark:text-gray-100 "
-          >
-            <FiGithub className="text-xl" />
-            GitHub
-          </a>
-
+        <div className=' translate-x-[-50%] w-[1102px] z-10 left-[50%] top-0 bottom-0 absolute pointer-events-none'>
+          <div className='lineLeftOne' />
+          <div className='lineLeftTwo' />
+          <div className='lineRightOne' />
+          <div className='lineRightTwo' />
         </div>
+
+        <section className="content-container">
+          <div className="text-container">
+            <h1 className='specialh1 text-center md:text-[4rem] text-[2rem]'>
+              The best electricity data analysis tool
+            </h1>
+            <p className=' text-[18px]  text-[#9ca3af] mt-3 mb-[30px]'>
+              WattCheck is a tool that helps you analyze electricity data to make better decisions.
+            </p>
+
+            <div className="flex justify-center gap-5 mt-[73px]">
+              <button className='w-60 bg-white/90 text-black font-semibold hover:bg-gray-300/90' onClick={() => navigate("/authScreen")}>Get Started</button>
+            </div>
+
+
+          </div>
+        </section>
+
+        <div className="border-[#D1DAFF]/30 absolute w-full border-b-[1px] top-[400px] pb-[1.5rem]" />
+        <div className="border-[#D1DAFF]/30 absolute w-full border-b-[1px] top-[510px] pb-[1.5rem]" />
+
       </div>
-    </main>
+    </div>
   );
 }
