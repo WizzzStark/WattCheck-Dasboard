@@ -7,7 +7,10 @@ import { getAuth } from 'firebase/auth';
 import { toast } from 'sonner';
 
 // eslint-disable-next-line react/prop-types
-export const DragAndDrop = ({ className, setSignal }) => {
+export const DragAndDrop = ({ signal, setSignal, styles }) => {
+    console.log('signal', signal)
+    console.log('setSignal', setSignal)
+
     const navigate = useNavigate();
     const [files] = useState([]);
 
@@ -40,7 +43,7 @@ export const DragAndDrop = ({ className, setSignal }) => {
                     console.error('Error uploading file: ', error);
                 });
             toast.success('File uploaded succesfully');
-            setSignal((prev) => !prev);
+            setSignal(!signal)
 
         } else {
             console.error('User is not logged in or file is not selected');
@@ -55,7 +58,7 @@ export const DragAndDrop = ({ className, setSignal }) => {
             maxFiles={1}
             label="Drop here your csv file"
             onChange={handleFileChange}
-            className={className}
+            className={styles}
             color='white'
             accept='text/csv'
         />

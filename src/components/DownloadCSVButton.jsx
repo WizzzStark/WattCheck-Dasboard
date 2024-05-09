@@ -22,7 +22,7 @@ function DownloadCSVButton({ csvData }) {
     };
 
     return (
-        <div className='flex cursor-pointer mt-10 justify-center py-3 bg-[#87eaeeda] hover:bg-[#b4f0f1da] text-black mx-10 rounded-md transition-all duration-150' onClick={handleDownloadExcel}>
+        <div className='flex cursor-pointer  mt-10 justify-center py-3 bg-[#87eaeeda] hover:bg-[#b4f0f1da] text-black mx-10 rounded-md transition-all duration-150' onClick={handleDownloadExcel}>
             <h1 className='font-semibold text-[20px]'>
                 Download CSV as Excel
             </h1>

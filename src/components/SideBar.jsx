@@ -6,10 +6,11 @@ import { getAuth, signOut } from 'firebase/auth';
 import { DragAndDrop } from './DragAndDrop';
 import { GoSignOut } from 'react-icons/go';
 import { toast } from 'sonner';
+import { set } from 'firebase/database';
 
 const SideBarContext = createContext();
 
-export const SideBar = ({ children, activeSideBar }) => {
+export const SideBar = ({ children, activeSideBar, setSignal, signal }) => {
     const [expanded, setExpanded] = useState(true);
     const auth = getAuth();
     const user = getAuth().currentUser;
@@ -34,7 +35,7 @@ export const SideBar = ({ children, activeSideBar }) => {
                             <>
                                 {expanded && (
                                     <div className='h-full'>
-                                        <DragAndDrop className={`h-full w-[275px]`} />
+                                        <DragAndDrop styles={`h-full w-[275px]`} setSignal={setSignal} signal={signal} />
                                     </div>
                                 )}
                             </>

@@ -35,6 +35,7 @@ export default function Dashboard() {
     const [percentageConsumption, setPercentageConsumption] = useState(0);
     const [kilogramsCO2, setKilogramsCO2] = useState(0);
 
+
     useEffect(() => {
 
         const fetchData = async () => {
@@ -257,7 +258,7 @@ export default function Dashboard() {
             <Toaster position="bottom-right" richColors />
 
             <div className='sticky top-0 h-[100vh] z-[5]'>
-                <SideBar activeSideBar={activeSidebarOption} files={files}>
+                <SideBar activeSideBar={activeSidebarOption} files={files} setSignal={setSignal} signal={signal}>
                     <SideBarElement icon={<LayoutDashboard size={20} />} text='Dashboard' active={activeSidebarOption === 0} onClick={() => handleSetActiveSideBar(0)} />
                     <SideBarElement icon={<Upload size={20} />} text='Upload File' active={activeSidebarOption === 1} onClick={() => handleSetActiveSideBar(1)} />
                     <hr className='my-3' />
@@ -329,7 +330,7 @@ export default function Dashboard() {
                                 </p>
                             </div>
                         </a>
-                        <DragAndDrop className="relative h-[75%] z-[5] w-[95%] mx-auto mt-10" setSignal={setSignal} />
+                        <DragAndDrop signal={signal} setSignal={setSignal} styles="relative h-[75%] z-[5] w-[95%] mx-auto mt-10" />
                         <div className='absolute z-[0] w-[20%] h-[40%] top-10 left-[460px] green__gradient opacity-30' />
                         <div className='absolute z-[0] w-[20%] h-[40%] top-80 left-[700px] green__gradient opacity-30' />
                         <div className='absolute z-[0] w-[20%] h-[45%] top-[100px] right-[10px] green__gradient opacity-30' />
