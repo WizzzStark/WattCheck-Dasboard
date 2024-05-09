@@ -279,7 +279,7 @@ export default function Dashboard() {
 
 
             {files.length > 0 ? (
-                <section className='bg-black text-white flex-1 overflow-auto relative poppins backdrop-blur-md'>
+                <section className='bg-black text-white flex-1 overflow-hidden relative poppins backdrop-blur-md'>
                     <div className='relative z-[5]'>
 
                         <FeaturedPrices currentPrice={currentPrice} minPrice={minPrice} maxPrice={maxPrice} />

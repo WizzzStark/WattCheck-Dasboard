@@ -20,7 +20,7 @@ export const SideBar = ({ children, activeSideBar }) => {
                 <nav className="h-full flex flex-col bg-[#11141ba8] px-2 shadow-sm">
 
                     <div className={`p-4 pb-2 flex justify-between items-center relative transition-none ${!expanded && "mt-5 mb-5"} `}>
-                        <img src={logo} className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} />
+                        <img src={logo} className={`overflow-hidden transition-all mt-2 ${expanded ? "w-32" : "w-0"}`} />
 
                         <button onClick={() => setExpanded((curr) => !curr)} className={`p-1.5 rounded-lg bg-[#212121] hover:bg-[#2c2c2c] text-gray-200 absolute right-2 w-10`}>
                             {expanded ? <ChevronFirst /> : <ChevronLast />}
