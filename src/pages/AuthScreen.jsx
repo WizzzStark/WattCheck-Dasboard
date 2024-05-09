@@ -44,10 +44,6 @@ const AuthScreen = () => {
     return (
         <div className="bg-[#111827] flex h-[100vh] w-full items-center justify-center text-gray-100"
         >
-            {/* #111827 */}
-            {/* <div className="absolute inset-0 overflow-hidden">
-                <div className="jumbo absolute -inset-[10px] opacity-50"></div>
-            </div> */}
 
             <div className="blur-[80px] translate-x-[-50%] w-[1102px] z-10 left-[50%] top-0 bottom-0 absolute overflow-hidden">
                 <div className="one" />

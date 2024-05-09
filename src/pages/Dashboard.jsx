@@ -320,7 +320,7 @@ export default function Dashboard() {
                 <>
                     <div className='relative flex w-full flex-col h-[100vh] overflow-hidden'>
                         <h1 className='text-[60px] poppins text-center mt-10 relative z-[5]'>Upload your first file</h1>
-                        <h2 className='text-[20px] poppins text-center relative z-[5]'>Start analyzing your electricity data</h2>
+                        <h2 className='text-[20px] poppins text-center relative z-[5] mb-3'>Start analyzing your electricity data</h2>
                         <a className='relative bg-white w-[95%] mx-auto h-20 text-black hover:bg-gray-200 z-[5] flex justify-center items-center' href="/consumptions.csv">
                             <div className='flex items-center gap-5'>
                                 <FiDownload size={20} className='text-black' />
