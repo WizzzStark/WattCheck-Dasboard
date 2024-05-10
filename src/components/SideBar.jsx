@@ -6,7 +6,6 @@ import { getAuth, signOut } from 'firebase/auth';
 import { DragAndDrop } from './DragAndDrop';
 import { GoSignOut } from 'react-icons/go';
 import { toast } from 'sonner';
-import { set } from 'firebase/database';
 
 const SideBarContext = createContext();
 

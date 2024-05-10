@@ -17,8 +17,8 @@ export const CustomTooltip = ({ active, payload, label }) => {
                 borderRadius: '5px',
                 color: '#fff'
             }}>
-                <p className="label">{`Fecha: ${formattedDate}`}</p>
-                <p className="intro">{`Consumo: ${formattedValue} kWh`}</p>
+                <p className="label">{`Date: ${formattedDate}`}</p>
+                <p className="intro">{`Consumption: ${formattedValue} kWh`}</p>
             </div>
         );
     }

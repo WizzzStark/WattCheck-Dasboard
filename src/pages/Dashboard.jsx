@@ -288,9 +288,9 @@ export default function Dashboard() {
                         <div className='flex flex-col gap-10 mx-10 relative'>
                             <DateAreaChart data={data2} text="Historic price MW/h in Spain" />
                             <div className='flex flex-col md:flex-row gap-10 relative z-10'>
-                                <AreaChartComponent data={data} colors={COLORS} text="Light Consumption" yAxisValue="Consumo_KWh" />
-                                <AreaChartComponent data={data} colors={COLORS} text="Light Price" yAxisValue="Precio_KWh_euro" />
-                                <AreaChartComponent data={lightPriceData} colors={COLORS} text="Your light Price" yAxisValue="value" />
+                                <AreaChartComponent data={data} colors={COLORS} text="Electricty Consumption" yAxisValue="Consumo_KWh" />
+                                <AreaChartComponent data={data} colors={COLORS} text="Electricty Price" yAxisValue="Precio_KWh_euro" />
+                                <AreaChartComponent data={lightPriceData} colors={COLORS} text="Your Electricty Price" yAxisValue="value" />
 
                             </div>
 
